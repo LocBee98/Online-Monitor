@@ -1,0 +1,10 @@
+﻿1. User name
+locxuan@vietmapenv.vn
+locbk61@gmail.com
+
+2. Enable
+true
+true
+false
+3. frequency
+5phút/lần

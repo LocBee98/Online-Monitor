@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ModbusRTU</name>
+    </assembly>
+    <members>
+        <member name="M:ModbusRTU.modbusrtu.Open(System.String,System.Int32,System.IO.Ports.Parity)">
+            <summary>
+            Open Port COM , alway Databit = 8 , StopBits = One. Phún Quốc Việt - 0344960322
+            </summary>
+             <param name="portName">portName is COM Serial</param>
+             <param name="baudRate">baudRate of COM ,recommend is 9600</param>
+             <param name="parity">parity of COM , recommend is None</param>
+        </member>
+        <member name="M:ModbusRTU.modbusrtu.FC01(System.Byte,System.UInt16,System.UInt16,System.Collections.BitArray@)">
+            <summary>
+            FC01 is function 01 (01Hex) Read Coil. Phún Quốc Việt - 0344960322
+            </summary>
+             <param name="Slave">Slave is Slave address of equipment</param>
+             <param name="start_Addr">start_Addr is address begin of equipment</param>
+             <param name="Quantity">Quantity is Quantity coil of equipment , note: only [0;16]</param>
+             <param name="values">Value is value coil of equipment</param>
+        </member>
+        <member name="M:ModbusRTU.modbusrtu.FC02(System.Byte,System.UInt16,System.UInt16,System.Collections.BitArray@)">
+            <summary>
+            FC02 is function 02 (02Hex) Read Discrete Input. Phún Quốc Việt - 0344960322
+            </summary>
+             <param name="Slave">Slave is Slave address of equipment</param>
+             <param name="start_Addr">start_Addr is address begin of equipment</param>
+             <param name="Quantity">Quantity is Quantity input of equipment , note: only [0;16]</param>
+             <param name="values">Value is value input of equipment</param>
+        </member>
+        <member name="M:ModbusRTU.modbusrtu.FC03(System.Byte,System.UInt16,System.UInt16,System.Int16[]@)">
+            <summary>
+            FC03 is function 03 (03Hex) Read Holging Register. Phún Quốc Việt - 0344960322
+            </summary>
+             <param name="Slave">Slave is Slave address of equipment</param>
+             <param name="start_Addr">start_Addr is address begin of equipment</param>
+             <param name="Quantity">Quantity is Quantity register of equipment , note: only [0;16]</param>
+             <param name="values">Value is value register of equipment</param>
+        </member>
+        <member name="M:ModbusRTU.modbusrtu.FC05(System.Byte,System.UInt16,System.Boolean)">
+            <summary>
+            FC05 is function 05 (05Hex) Write single Coil. Phún Quốc Việt - 0344960322
+            </summary>
+             <param name="Slave">Slave is Slave address of equipment</param>
+             <param name="start_Addr">start_Addr is address begin of equipment</param>
+             <param name="values">Value is value coil of equipment</param>
+        </member>
+        <member name="M:ModbusRTU.modbusrtu.FC06(System.Byte,System.UInt16,System.UInt16)">
+            <summary>
+            FC06 is function 06 (06Hex) Write Single Register. Phún Quốc Việt - 0344960322
+            </summary>
+             <param name="Slave">Slave is Slave address of equipment</param>
+             <param name="start_Addr">start_Addr is address begin of equipment</param>
+             <param name="values">Value is value register of equipment</param>
+        </member>
+        <member name="M:ModbusRTU.modbusrtu.FC15(System.Byte,System.UInt16,System.UInt16,System.Collections.BitArray)">
+            <summary>
+            FC15 is function 15 (0FHex) Write Multiple Coils. Phún Quốc Việt - 0344960322
+            </summary>
+             <param name="Slave">Slave is Slave address of equipment</param>
+             <param name="start_Addr">start_Addr is address begin of equipment</param>
+             <param name="Quantity">Quantity is Quantity coil of equipment , note: only [0;16]</param>
+             <param name="WritedDataBit">Value is value coil of equipment</param>
+        </member>
+        <member name="M:ModbusRTU.modbusrtu.FC16(System.Byte,System.UInt16,System.UInt16,System.UInt16[])">
+            <summary>
+            FC16 is function 16 (10Hex) Write Multiple Coils. Phún Quốc Việt - 0344960322
+            </summary>
+             <param name="Slave">Slave is Slave address of equipment</param>
+             <param name="start_Addr">start_Addr is address begin of equipment</param>
+             <param name="Quantity">Quantity is Quantity coil of equipment , note: only [0;16]</param>
+             <param name="WritedDataBit">Value is value register of equipment</param>
+        </member>
+    </members>
+</doc>

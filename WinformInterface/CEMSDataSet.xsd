@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CEMSDataSet" targetNamespace="http://tempuri.org/CEMSDataSet.xsd" xmlns:mstns="http://tempuri.org/CEMSDataSet.xsd" xmlns="http://tempuri.org/CEMSDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CEMSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CEMSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WinformInterface.Properties.Settings.GlobalReference.Default.CEMSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CemsTableTableAdapter" GeneratorDataComponentClassName="CemsTableTableAdapter" Name="CemsTable" UserDataComponentName="CemsTableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CEMSConnectionString (Settings)" DbObjectName="CEMS.dbo.CemsTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DateTime, Temp FROM dbo.CemsTable</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DateTime" DataSetColumn="DateTime" />
+              <Mapping SourceColumn="Temp" DataSetColumn="Temp" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CEMSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CEMSDataSet" msprop:Generator_UserDSName="CEMSDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CemsTable" msprop:Generator_TableClassName="CemsTableDataTable" msprop:Generator_TableVarName="tableCemsTable" msprop:Generator_TablePropName="CemsTable" msprop:Generator_RowDeletingName="CemsTableRowDeleting" msprop:Generator_RowChangingName="CemsTableRowChanging" msprop:Generator_RowEvHandlerName="CemsTableRowChangeEventHandler" msprop:Generator_RowDeletedName="CemsTableRowDeleted" msprop:Generator_UserTableName="CemsTable" msprop:Generator_RowChangedName="CemsTableRowChanged" msprop:Generator_RowEvArgName="CemsTableRowChangeEvent" msprop:Generator_RowClassName="CemsTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateTime" msprop:Generator_ColumnVarNameInTable="columnDateTime" msprop:Generator_ColumnPropNameInRow="DateTime" msprop:Generator_ColumnPropNameInTable="DateTimeColumn" msprop:Generator_UserColumnName="DateTime">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Temp" msprop:Generator_ColumnVarNameInTable="columnTemp" msprop:Generator_ColumnPropNameInRow="Temp" msprop:Generator_ColumnPropNameInTable="TempColumn" msprop:Generator_UserColumnName="Temp" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
